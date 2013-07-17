@@ -310,6 +310,11 @@ class MySQL {
 	function LastInsertID(){
 		return mysql_insert_id();
 	}
+	
+	// Returns TRUE if the connection to the server MySQL server is working, otherwise FALSE.
+	function Ping(){
+		return mysql_ping($this->databaseLink);
+	}
 
 	// Closes the connections
 	function CloseConnection(){
